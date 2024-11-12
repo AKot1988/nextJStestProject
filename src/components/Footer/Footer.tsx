@@ -8,11 +8,9 @@ type FooterProps = {
 
 const Footer: FC<FooterProps> = ({ title }) => {
   return (
-    <div>
-      <footer>
-        <h4> Footer</h4>
-      </footer>
-    </div>
+    <footer>
+      <h4> Footer</h4>
+    </footer>
   );
 };
 

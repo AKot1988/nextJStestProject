@@ -1,20 +1,20 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import { Header, Footer } from "@/components";
-import "./globals.css";
+import {Footer, Header } from "@/components";
+import { FC, ComponentType } from "react";
+import classes from './layout.module.scss'
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+// type LayoutProps = {
+//     Component: ComponentType<any>;
+//     children: { [k: string]: any };
+// }
+
+export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en">
       <body>
         <Header/>
-        {children}
-        <Footer title={"footer"} />
+        <div className={classes.container}>{children}</div>
+        <Footer title="footer"/>
       </body>
     </html>
-  );
+  )
 }
